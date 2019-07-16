@@ -1,0 +1,225 @@
+.screen-1_heading{
+    transition: all 1s;
+}
+.screen-1_heading_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen-1_heading_animate_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.screen-1_phone{
+    transition: all 1s;
+}
+.screen-1_phone_animate_init{
+    opacity: 0;
+    transform: translate(0,-100%);
+}
+.screen-1_phone_animate_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.screen-1_shadow{
+    transition: all 1s;
+}
+.screen-1_shadow_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen-1_shadow_animate_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+/*第二屏*/
+.screen-2_heading,
+.screen-2_subheading,
+.screen-2_phone{
+    transition: all 1s;
+}
+.screen-2_heading_animate_init{
+    opacity: 0;
+    transform: translate(0,-100%);
+}
+.screen-2_phone_animate_init{
+    opacity: 0;
+    transform: translate(0,50%);
+}
+.screen-2_subheading_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen-2_heading_animate_done,
+.screen-2_phone_animate_done,
+.screen-2_subheading_animate_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.screen-2_point{
+    transition: all .5s 1s;
+}
+.screen-2_point_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.screen-2_point_i_1_animate_init{
+    opacity: 0;
+    transform: translate(-100%,0);
+}
+.screen-2_point_i_2_animate_init,
+.screen-2_point_i_3_animate_init{
+    opacity: 0;
+    transform: translate(100%,0);
+}
+/*第三屏*/
+.screen-3_feature,
+.screen-3_heading,
+.screen-3_subheading,
+.screen-3_phone{
+    transition: all 1s;
+}
+.screen-3_heading_animate_done,
+.screen-3_phone_animate_done,
+.screen-3_subheading_animate_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.screen-3_subheading_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen-3_heading_animate_init{
+    opacity: 0;
+    transform: translate(0,-100%);
+}
+.screen-3_phone_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen-3_feature_animate_init{
+    opacity: 0;
+    transform: scale(.5);
+}
+.screen-3_feature_animate_done{
+    opacity: 1;
+    transform: scale(1);
+}
+.screen-3_feature_item{
+   transition: all .5s;
+   cursor: pointer;
+}
+.screen-3_feature_item:hover{
+   transform: scale(1.1);
+   border-color: #fff;
+}
+/*第四屏*/
+.screen-4_heading,
+.screen-4_subheading{
+    transition: all 1s;
+}
+.screen-4_heading_animate_init{
+    opacity: 0;
+    transform: translate(0,-100%);
+}
+.screen-4_subheading_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen-4_type_item_i_1{
+    transition: all .5s;
+}
+.screen-4_type_item_i_2{
+    transition: all 1s;
+}
+.screen-4_type_item_i_3{
+    transition: all 1.5s;
+}
+.screen-4_type_item_i_4{
+    transition: all 2s;
+}
+.screen-4_type_item_i_1_animate_init,
+.screen-4_type_item_i_2_animate_init,
+.screen-4_type_item_i_3_animate_init,
+.screen-4_type_item_i_4_animate_init{
+    opacity: 0;
+}
+.screen-4_type_item_i_1_animate_done,
+.screen-4_type_item_i_2_animate_done,
+.screen-4_type_item_i_3_animate_done,
+.screen-4_type_item_i_4_animate_done{
+    opacity: 1;
+}
+/*第五屏*/
+.screen-5_heading,
+.screen-5_bg,
+.screen-5_subheading{
+    transition: all 1s;
+}
+.screen-5_heading_animate_init{
+    opacity: 0;
+    transform: translate(0,-100%);
+}
+.screen-5_bg_animate_init,
+.screen-5_subheading_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+/* 定义帧动画*/
+@keyframes bounce{
+    0%,100%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+/* 使用帧动画*/
+.screen-2_point:before,
+.screen-2_point:after{
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute; 
+    top: 1px;
+    left: 1px;
+    background-color:rgba(255,0,0,0.4);
+    animation:bounce 2s infinite;
+    border-radius: 50%;
+}
+.screen-2_point:before{
+    animation:bounce 2s infinite 1s;
+}
+.screen-2_point_i_1:before,
+.screen-2_point_i_1:after{
+    left:200px;
+}
+/*导航条 _status_back 样式*/
+.header{
+    transition: all 1s;
+}
+.header_status_back{
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+.header_status_back  .header_logo,
+.header_status_back  .header_nav-item{
+   color:#fff;
+}
+ .header_status_back  .header_nav-item_status_active{
+   color: red;
+} 
+/*大纲 _status_in 样式*/
+.outline{
+    opacity: 0;
+    transition: all 1s;
+    transform: translate(100%,0);
+}
+.outline_status_in{
+    opacity: 1;
+    transform: translate(0,0);
+}
